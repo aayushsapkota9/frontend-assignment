@@ -3,10 +3,7 @@ import React, { useState } from 'react'
 import { useQuery } from 'react-query'
 import { ShoppingCartOutlined} from '@ant-design/icons';
 import { Avatar, Card,Carousel, Tag } from 'antd';
-import Image from 'next/image';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation'
-import { useDispatch } from 'react-redux'
 import { addToCart } from '../redux/reducerSlice/cart'
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
 

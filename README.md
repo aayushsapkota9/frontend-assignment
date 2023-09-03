@@ -6,6 +6,7 @@
 - [x] redux setup
 - [x] transtack query
 - [x] cart add and remove using redux
+- [Deployment site](https://frontend-assignment-drab-one.vercel.app/)
 
 ## Assignment Description:
 
