@@ -6,6 +6,7 @@ import { Avatar, Card,Carousel, Tag } from 'antd';
 import { useRouter } from 'next/navigation'
 import { addToCart } from '../redux/reducerSlice/cart'
 import { useAppDispatch, useAppSelector } from "../redux/hooks";
+import { Button, message } from 'antd';
 
 const App = () => {
   const router= useRouter()
@@ -28,6 +29,7 @@ const App = () => {
   const onChange = (currentSlide: number) => {
     console.log(currentSlide);
   };
+  const [messageApi, contextHolder] = message.useMessage();
   const contentStyle: React.CSSProperties = {
     margin: 0,
     height: '40rem',
@@ -39,14 +41,17 @@ const App = () => {
     backgroundPosition:'center',
 
   };
+  const handleAddCart=(item:any)=>{
+    messageApi.info('Item Added to Cart');
+    dispatch(addToCart(item))
+  }
   const getItems = async () => {
     const res=await fetch('https://fakestoreapi.com/products')
     const data=res.json()
     return data
             // .then(res=>res.json())
             // .then(json=>setItems(json))
-    
-
+  
   };
     
   const postsQuery = useQuery({
@@ -57,6 +62,7 @@ const App = () => {
   if(postsQuery.error) return <pre>{JSON.stringify(postsQuery.error)}</pre>
 
   return (<div className='relative top-20'>
+          {contextHolder}
         <Carousel afterChange={onChange}>
   <div>
     <h3 style={contentStyle}>1</h3>
@@ -89,9 +95,9 @@ const App = () => {
           </Tag><br /></p>
   {/* <button onClick={() => dispatch(addToCart(item))}><ShoppingCartOutlined /> Add to Cart</button>
   <button onClick={() => router.push(`/product?id=${item._id}`)}>Buy Now</button> */}
-  <div className='flex justify-around gap-4'>
-  <button className='rounded-2xl px-1 py-2 w-40  bg-orange-400 ' onClick={() => dispatch(addToCart(item))} ><ShoppingCartOutlined /> Add to Cart</button>
-  <button className='rounded-2xl px-1 py-2 w-40  bg-orange-400 ' onClick={() => router.push(`/product/${item.id}`)}> Buy Now</button>
+  <div className='flex justify-around gap-4 relative top-2'>
+  <button className='rounded px-1 py-2 w-40  bg-orange-400 ' onClick={()=>handleAddCart(item)} ><ShoppingCartOutlined /> Add to Cart</button>
+  <button className='rounded px-1 py-2 w-24  bg-orange-400 ' onClick={() => router.push(`/product/${item.id}`)}> Buy Now</button>
   
   </div>
 

@@ -36,7 +36,7 @@ const App = ({ params }: { params: { id: string } }) => {
   if(productQuery.data){()=>setProducts(productQuery.data)}
   return (<div>
           <NavBar></NavBar>
-    <section className="text-gray-600 body-font overflow-hidden">
+    <section className="text-gray-600 body-font overflow-hidden relative top-20">
   <div className="container px-5 py-24 mx-auto">
     <div className="lg:w-4/5 mx-auto flex flex-wrap">
     <img

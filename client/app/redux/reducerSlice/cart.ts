@@ -30,7 +30,6 @@ const productsSlice = createSlice({
       const existingItem:any = state.cartList.find((item) => item.id === newItem.id);
 
       if (existingItem){
-        debugger
         // If the item is already in the cart, increment its quantity
         existingItem.quantity += 1;
       } else {
@@ -50,11 +49,21 @@ const productsSlice = createSlice({
         ...state,
         cartList:initialCart
       }
-    }
+    },
+    subtractQuantity(state, action:PayloadAction<Card>) {
+      const newItem = action.payload;
+      const existingItem:any = state.cartList.find((item) => item.id === newItem.id);
+
+      if (existingItem){
+        // If the item is already in the cart, decrement its quantity
+        existingItem.quantity -= 1;
+      }
+      return state;
+    },
 
   },
 }
 )
 
-export const { addToCart,removeFromCart} = productsSlice.actions;
+export const { addToCart,removeFromCart,subtractQuantity} = productsSlice.actions;
 export default productsSlice.reducer;
