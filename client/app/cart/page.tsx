@@ -1,9 +1,9 @@
 import React from 'react'
 
-const page = () => {
+const Card = () => {
   return (
-    <div>page</div>
+    <div>Card</div>
   )
 }
 
-export default page
+export default Card
