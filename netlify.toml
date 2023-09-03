@@ -1,4 +1,4 @@
 [build]
 base = "client"
-publish = "client/public"
-functions = "client/functions"
+publish = "public"
+# functions = "functions"
