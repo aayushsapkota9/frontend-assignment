@@ -1,5 +1,12 @@
 # Assignment Title: E-commerce Development Task
 
+- [x] homepage that can fetch data from api
+- [x] search option and open product when selecting item
+- [x] product page
+- [x] redux setup
+- [x] transtack query
+- [x] cart add and remove using redux
+
 ## Assignment Description:
 
 In this assignment, you will create a basic e-commerce application using Next.js. You'll apply key Next concepts and fundamental web development skills. Your task is to develop a multi-page web application named "OnlineStore" that allows users to browse and search for products.
