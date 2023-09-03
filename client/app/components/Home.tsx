@@ -6,9 +6,14 @@ import { Avatar, Card,Carousel, Tag } from 'antd';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation'
+import { useDispatch } from 'react-redux'
+import { addToCart } from '../redux/reducerSlice/cart'
+import { useAppDispatch, useAppSelector } from "../redux/hooks";
 
 const App = () => {
   const router= useRouter()
+  const dispatch = useAppDispatch();
+
   interface Card{
     id:number,
     title:string,
@@ -54,7 +59,7 @@ const App = () => {
   if(postsQuery.isLoading) return <h1>Loading......</h1>
   if(postsQuery.error) return <pre>{JSON.stringify(postsQuery.error)}</pre>
 
-  return (<div>
+  return (<div className='relative top-20'>
         <Carousel afterChange={onChange}>
   <div>
     <h3 style={contentStyle}>1</h3>
@@ -88,7 +93,7 @@ const App = () => {
   {/* <button onClick={() => dispatch(addToCart(item))}><ShoppingCartOutlined /> Add to Cart</button>
   <button onClick={() => router.push(`/product?id=${item._id}`)}>Buy Now</button> */}
   <div className='flex justify-around gap-4'>
-  <button className='rounded-2xl px-1 py-2 w-40  bg-orange-400 '><ShoppingCartOutlined /> Add to Cart</button>
+  <button className='rounded-2xl px-1 py-2 w-40  bg-orange-400 ' onClick={() => dispatch(addToCart(item))} ><ShoppingCartOutlined /> Add to Cart</button>
   <button className='rounded-2xl px-1 py-2 w-40  bg-orange-400 ' onClick={() => router.push(`/product/${item.id}`)}> Buy Now</button>
   
   </div>
