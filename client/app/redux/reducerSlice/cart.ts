@@ -1,6 +1,4 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { Card } from "antd";
-
 export const initialState: { cartList: Card[] } = {
   cartList: [],
 };
