@@ -89,7 +89,7 @@ const App = () => {
   <button onClick={() => router.push(`/product?id=${item._id}`)}>Buy Now</button> */}
   <div className='flex justify-around gap-4'>
   <button className='rounded-2xl px-1 py-2 w-40  bg-orange-400 '><ShoppingCartOutlined /> Add to Cart</button>
-  <button className='rounded-2xl px-1 py-2 w-40  bg-orange-400 ' onClick={() => router.push(`/product?id=${item.id}`)}> Buy Now</button>
+  <button className='rounded-2xl px-1 py-2 w-40  bg-orange-400 ' onClick={() => router.push(`/product/${item.id}`)}> Buy Now</button>
   
   </div>
 

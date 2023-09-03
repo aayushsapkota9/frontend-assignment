@@ -53,8 +53,11 @@ const App: React.FC = () => {
       placeholder="Search for Products"
       onSearch={(text) => {searchProducts(text)}}
       // onSelect={(text,obj)=>router.push(`/product?id=${item.id}`)}}
-      onSelect={(text,item)=>router.push(`/product?id=${item.id}`)}
+      onSelect={(text,item)=>router.push(`/product/${item.id}`)}
       bordered={false}
+      filterOption={(inputValue, option) =>
+        option!.value.toUpperCase().indexOf(inputValue.toUpperCase()) !== -1
+      }
     />
   );
 };
