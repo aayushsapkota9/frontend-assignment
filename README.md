@@ -1,4 +1,4 @@
-# Assignment Title: E-commerce Development Task
+# Assignment Title: E-commerce Development Taskk
 
 - [x] homepage that can fetch data from api
 - [x] search option and open product when selecting item
