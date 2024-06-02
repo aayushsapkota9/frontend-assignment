@@ -6,7 +6,6 @@
 - [x] redux setup
 - [x] transtack query
 - [x] cart add and remove using redux
-- [Deployment site](https://frontend-assignment-drab-one.vercel.app/)
 
 ## Assignment Description:
 
@@ -14,7 +13,7 @@ In this assignment, you will create a basic e-commerce application using Next.js
 
 ## Instructions:
 
-1. Fork the provided project repository to your profile and clone it to your machine to begin the project.
+1. Create a project repository on your profile and clone it to your machine to begin the project.
 2. Design and implement a web application named "OnlineStore" that allows users to browse and search for products.
 3. The application should have the following pages:
    - Home Page: Display a list of products with their images, names, and prices. Fetch the list from the provided API endpoint.
@@ -41,16 +40,9 @@ You can fetch data using the following API endpoint: https://fakestoreapi.com/
 
 ## Submission Guidelines:
 
-1. Fork this GitHub repository [Assignment Repo](https://github.com/internsathi/frontend-assignment) to your own GitHub account.
-2. Commit your code regularly and push the changes to your forked repository.
-3. Do not create a pull request; just submit your forked repository.
+1. Clone your fresh repo.
+2. Commit your code regularly and push the changes to your repository.
 4. Provide a DOCS.md file with all the technologies used and how to run the program locally.
-5. Once you have completed the assignment, share the repository URL with us via the [submission form](https://forms.gle/QQcXn8odBUfoHtbt7).
-
-6. Join this discord server to get an update: [Join Here ](https://discord.gg/5qbGZP7V8g)
-
-- Submission Deadline: Task Submission: 2023/09/3 02:30 PM
-
-Check out the discussion section of this repo to ask any related queries or doubts.
+5. Once you have completed the assignment, deploy it in vercel or netlify.
 
 Note: The assignment is intentionally challenging so do your best ;) . Don't hesitate to ask for any clarifications in the discussion section of this repo. Good luck with your assignment!
